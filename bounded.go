@@ -81,7 +81,7 @@ func MD5All(root string) (map[string][md5.Size]byte, error) {
 	for i := 0; i < numDigesters; i++ {
 		go func() {
 			digester(done, paths, c) // HLc
-			wg.Done()
+
 		}()
 	}
 	go func() {
