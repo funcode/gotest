@@ -1,7 +1,21 @@
-runtime! config/bracketed-paste.vim
-nnoremap c :bp\|bd #<CR>
-nnoremap <F5> :buffers<CR>:buffer<Space>
-let g:rainbow_active = 1
-runtime! config/plugin/rainbow.vim
-set mouse-=a
-set backupcopy=yes
+" " runtime! config/bracketed-paste.vim
+" nnoremap c :bp\|bd #<CR>
+" nnoremap <F5> :buffers<CR>:buffer<Space>
+" " let g:rainbow_active = 1
+" " runtime! config/plugin/rainbow.vim
+ set mouse-=a
+ set backupcopy=yes
+ set wrap
+ au BufRead * normal zR
+" " au VimEnter * RainbowParenthesesToggle
+" " au Syntax * RainbowParenthesesLoadRound
+" " au Syntax * RainbowParenthesesLoadSquare
+" " au Syntax * RainbowParenthesesLoadBraces
+ let g:vim_json_syntax_conceal = 0
+ set listchars=tab:\ \ 
+ " colorscheme solarized
+ " let g:airline_theme='solarized'
+ Plugin 'ConradIrwin/vim-bracketed-paste'
+ Plugin 'luochen1990/rainbow'
+ let g:rainbow_active = 1
+

@@ -1,0 +1,23 @@
+ " runtime! config/bracketed-paste.vim
+" nnoremap c :bp\|bd #<CR>
+" nnoremap <F5> :buffers<CR>:buffer<Space>
+ " let g:rainbow_active = 1
+ " runtime! config/plugin/rainbow.vim
+ "set mouse-=a
+ " set nonu
+ set backupcopy=yes
+ set wrap
+ vmap cc "+y
+ let g:vim_json_syntax_conceal = 0
+ set listchars=tab:\ \ 
+ colorscheme solarized
+ let g:airline_theme='solarized'
+ Plugin 'ConradIrwin/vim-bracketed-paste'
+ let g:rainbow_active = 1
+ Plugin 'luochen1990/rainbow'
+ set t_RV=
+ " set foldlevel=99
+ " set foldlevelstart=20
+ " set foldmethod=syntax
+ set nofoldenable    " disable folding
+ autocmd FileType go let g:syntastic_go_checkers = [ 'go' ]
