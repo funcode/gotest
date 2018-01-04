@@ -10,8 +10,8 @@
  vmap cc "+y
  let g:vim_json_syntax_conceal = 0
  set listchars=tab:\ \ 
- colorscheme solarized
- let g:airline_theme='solarized'
+ " colorscheme solarized
+ " let g:airline_theme='solarized'
  Plugin 'ConradIrwin/vim-bracketed-paste'
  let g:rainbow_active = 1
  Plugin 'luochen1990/rainbow'
