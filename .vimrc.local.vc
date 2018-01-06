@@ -15,7 +15,7 @@
  Plugin 'ConradIrwin/vim-bracketed-paste'
  let g:rainbow_active = 1
  Plugin 'luochen1990/rainbow'
- set t_RV=
+ " set t_RV=
  " set foldlevel=99
  " set foldlevelstart=20
  " set foldmethod=syntax
