@@ -4,8 +4,10 @@
  let g:rainbow_active = 1
  runtime! config/plugin/rainbow.vim
  vmap cc "+y
+ nmap <Leader>md :LivedownToggle<CR>
  set backupcopy=yes
  set wrap
+ " let g:polyglot_disabled = ['markdown']
  " au BufRead * normal zR
  " let g:vim_json_syntax_conceal = 0
  " set listchars=tab:\ \ 
@@ -13,4 +15,6 @@
  " let g:rainbow_active = 1
  " Plugin 'luochen1990/rainbow'
  " set t_RV=
+
+silent! source ~/workspace/vim-config/init/options.vim
 

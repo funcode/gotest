@@ -10,14 +10,19 @@
  vmap cc "+y
  let g:vim_json_syntax_conceal = 0
  set listchars=tab:\ \ 
- " colorscheme solarized
- " let g:airline_theme='solarized'
- Plugin 'ConradIrwin/vim-bracketed-paste'
- let g:rainbow_active = 1
- Plugin 'luochen1990/rainbow'
+ colorscheme hybrid
+ " let g:airline_theme='hybrid'
  " set t_RV=
  " set foldlevel=99
  " set foldlevelstart=20
  " set foldmethod=syntax
  set nofoldenable    " disable folding
  autocmd FileType go let g:syntastic_go_checkers = [ 'go' ]
+
+" Extra Plugins
+ Plugin 'ConradIrwin/vim-bracketed-paste'
+ let g:rainbow_active = 1
+ Plugin 'luochen1990/rainbow'
+ Plugin 'shime/vim-livedown'
+ Plugin 'sheerun/vim-polyglot'
+ nmap <Leader>md :LivedownToggle<CR>
