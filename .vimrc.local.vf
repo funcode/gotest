@@ -1,3 +1,4 @@
+ silent! source ~/workspace/vim-config/init/options.vim
  runtime! config/bracketed-paste.vim
 " nnoremap c :bp\|bd #<CR>
 " nnoremap <F5> :buffers<CR>:buffer<Space>
@@ -7,14 +8,12 @@
  nmap <Leader>md :LivedownToggle<CR>
  set backupcopy=yes
  set wrap
+ " let g:livedown_autorun = 1
  " let g:polyglot_disabled = ['markdown']
  " au BufRead * normal zR
  " let g:vim_json_syntax_conceal = 0
- " set listchars=tab:\ \ 
+ set listchars=tab:\ \ 
  " Plugin 'ConradIrwin/vim-bracketed-paste'
  " let g:rainbow_active = 1
  " Plugin 'luochen1990/rainbow'
  " set t_RV=
-
-silent! source ~/workspace/vim-config/init/options.vim
-
