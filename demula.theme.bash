@@ -48,7 +48,7 @@ D_VIMSHELL_COLOR="${cyan}"
 # ------------------------------------------------------------------ FUNCTIONS
 case $TERM in
   xterm*)
-      TITLEBAR="\033]0;\w\007"
+      TITLEBAR="\033]0;\W\007"
       ;;
   *)
       TITLEBAR=""
