@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+SCM_THEME_PROMPT_DIRTY=" ${red}✗"
+SCM_THEME_PROMPT_CLEAN=" ${bold_green}✓"
+SCM_THEME_PROMPT_PREFIX=" ${green}|"
+SCM_THEME_PROMPT_SUFFIX="${green}|"
+
+GIT_THEME_PROMPT_DIRTY=" ${red}✗"
+GIT_THEME_PROMPT_CLEAN=" ${bold_green}✓"
+GIT_THEME_PROMPT_PREFIX=" ${green}|"
+GIT_THEME_PROMPT_SUFFIX="${green}|"
+
+RVM_THEME_PROMPT_PREFIX="|"
+RVM_THEME_PROMPT_SUFFIX="|"
+
+__bobby_clock() {
+  printf "$(clock_prompt) "
+
+  if [ "${THEME_SHOW_CLOCK_CHAR}" == "true" ]; then
+    printf "$(clock_char) "
+  fi
+}
+mitsuhikos_lastcommandfailed() {
+  code=$?
+  if [ $code != 0 ];
+  then
+    echo "${white}exited ${red}\
+$code ${normal}"
+  fi
+}
+
+
+function prompt_command() {
+    local LAST_COMMAND_FAILED=$(mitsuhikos_lastcommandfailed)
+    #PS1="${bold_cyan}$(scm_char)${green}$(scm_prompt_info)${purple}$(ruby_version_prompt) ${yellow}\h ${reset_color}in ${green}\w ${reset_color}\n${green}→${reset_color} "
+    PS1="\n$(battery_char) $(__bobby_clock)${yellow}$(ruby_version_prompt) ${purple}\h ${reset_color}in ${green}\w ${LAST_COMMAND_FAILED}\n${bold_cyan}$(scm_char)${green}$(scm_prompt_info) →${reset_color} "
+}
+
+THEME_SHOW_CLOCK_CHAR=${THEME_CLOCK_CHECK:-"true"}
+THEME_CLOCK_CHAR_COLOR=${THEME_CLOCK_CHAR_COLOR:-"$red"}
+THEME_CLOCK_COLOR=${THEME_CLOCK_COLOR:-"$bold_cyan"}
+THEME_CLOCK_FORMAT=${THEME_CLOCK_FORMAT:-"%Y-%m-%d %H:%M:%S"}
+
+safe_append_prompt_command prompt_command
