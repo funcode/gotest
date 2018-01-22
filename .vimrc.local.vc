@@ -23,6 +23,9 @@
  Plugin 'ConradIrwin/vim-bracketed-paste'
  let g:rainbow_active = 1
  Plugin 'luochen1990/rainbow'
+" Run npm install -g livedown at first
+" to open markdown file in a browser tab
  Plugin 'shime/vim-livedown'
  Plugin 'sheerun/vim-polyglot'
  nmap <Leader>md :LivedownToggle<CR>
+ set t_u7= 
