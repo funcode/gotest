@@ -2,7 +2,7 @@
 
 # disable git status check
 export SCM_CHECK=false
-git config --global --add bash-it.hide-status 0
+# git config --global --add bash-it.hide-status 0
 
 # Path to the bash it configuration
 export BASH_IT="/Users/pivotal/.bash_it"
@@ -12,6 +12,7 @@ export BASH_IT_THEME="demula"
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 export GOROOT=/usr/local/go
 export GOPATH=/Users/pivotal/workspace
@@ -30,3 +31,6 @@ alias vc="pushd ~; rm .vim; ln -s ~/workspace/vim-config .vim; rm .vimrc; ln -s 
 alias vl="ls -l ~/.vim;ls -l ~/.vimrc*"
 alias viml="vim ~/.vimrc.local"
 alias vimrc="vim ~/.vimrc"
+alias vb="vim ~/.bash_profile"
+
+
