@@ -14,9 +14,10 @@ export BASH_IT_THEME="demula"
 source $BASH_IT/bash_it.sh
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
-export GOROOT=/usr/local/go
+# export GOROOT=/usr/local/go
+export GOROOT=/usr/local/Cellar/go/1.9.2/libexec/
 export GOPATH=/Users/pivotal/workspace
-export PATH=$GOPATH/bin:$PATH
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 # function gfm()
 # {
