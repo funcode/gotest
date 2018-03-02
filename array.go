@@ -20,4 +20,8 @@ func main() {
 		fmt.Println(n)
 	}
 
+	b := []string{a[0], a[1]}
+	for _, n := range b {
+		fmt.Println(n)
+	}
 }
