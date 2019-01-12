@@ -30,3 +30,5 @@
  nmap <Leader>md :LivedownToggle<CR>
  set t_u7= 
  let g:airline_extensions = ['branch', 'netrw', 'ale', 'tabline']
+ map <C-S-Left>  :bp<CR>
+ map <C-S-Right> :bn<CR>
