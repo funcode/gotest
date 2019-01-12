@@ -29,3 +29,4 @@
  Plugin 'sheerun/vim-polyglot'
  nmap <Leader>md :LivedownToggle<CR>
  set t_u7= 
+ let g:airline_extensions = ['branch', 'netrw', 'ale', 'tabline']
