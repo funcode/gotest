@@ -3,9 +3,9 @@
 " nnoremap <F5> :buffers<CR>:buffer<Space>
  " let g:rainbow_active = 1
  " runtime! config/plugin/rainbow.vim
- " set nonu
+
  set mouse+=a
- set backupcopy=yes
+ set backupcopy=no
  set wrap
  vmap cc "+y
  let g:vim_json_syntax_conceal = 0
