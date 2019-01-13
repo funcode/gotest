@@ -3,9 +3,10 @@
 " nnoremap <F5> :buffers<CR>:buffer<Space>
  " let g:rainbow_active = 1
  " runtime! config/plugin/rainbow.vim
-
+ "
  set mouse+=a
- set backupcopy=no
+ " set writebackup
+ set backupcopy=yes
  set wrap
  vmap cc "+y
  let g:vim_json_syntax_conceal = 0
@@ -30,5 +31,7 @@
  nmap <Leader>md :LivedownToggle<CR>
  set t_u7= 
  let g:airline_extensions = ['branch', 'netrw', 'ale', 'tabline']
- map <C-S-Left>  :bp<CR>
- map <C-S-Right> :bn<CR>
+ map <Leader><Left>  :bp<CR>
+ map <Leader><Right> :bn<CR>
+ map <S-Left> <C-W>h
+ map <S-Right> <C-W>l
