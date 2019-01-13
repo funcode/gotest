@@ -31,10 +31,12 @@
  nmap <Leader>md :LivedownToggle<CR>
  set t_u7= 
  let g:airline_extensions = ['branch', 'netrw', 'ale', 'tabline']
+ " jump to next or previous buffer
  map <C-S-Left>  :bp<CR>
  map <C-S-Right> :bn<CR>
- map <S-Left> <C-W>h
- map <S-Right> <C-W>l
+ " jump to left or right window
+ map <Leader><Left> <C-W>h
+ map <Leader><Right> <C-W>l
  if &term =~ '^screen'
     " tmux will send xterm-style keys when its xterm-keys option is on
     execute "set <xUp>=\e[1;*A"
