@@ -1,6 +1,6 @@
  " runtime! config/bracketed-paste.vim
-" nnoremap c :bp\|bd #<CR>
-" nnoremap <F5> :buffers<CR>:buffer<Space>
+ " nnoremap c :bp\|bd #<CR>
+ " nnoremap <F5> :buffers<CR>:buffer<Space>
  " let g:rainbow_active = 1
  " runtime! config/plugin/rainbow.vim
  "
@@ -20,12 +20,12 @@
  set nofoldenable    " disable folding
  autocmd FileType go let g:syntastic_go_checkers = [ 'go' ]
 
-" Extra Plugins
+ " Extra Plugins
  Plugin 'ConradIrwin/vim-bracketed-paste'
  let g:rainbow_active = 1
  Plugin 'luochen1990/rainbow'
-" Run npm install -g livedown at first
-" to open markdown file in a browser tab
+ " Run npm install -g livedown at first
+ " to open markdown file in a browser tab
  Plugin 'shime/vim-livedown'
  Plugin 'sheerun/vim-polyglot'
  nmap <Leader>md :LivedownToggle<CR>
@@ -44,4 +44,4 @@
     execute "set <xRight>=\e[1;*C"
     execute "set <xLeft>=\e[1;*D"
     map <Esc>[B <Down>
-endif
+ endif
