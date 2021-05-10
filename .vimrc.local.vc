@@ -21,16 +21,18 @@
  autocmd FileType go let g:syntastic_go_checkers = [ 'go' ]
 
  " Extra Plugins
- Plugin 'ConradIrwin/vim-bracketed-paste'
+ Plugin 'dense-analysis/ale'
+ "Plugin 'ConradIrwin/vim-bracketed-paste'
  let g:rainbow_active = 1
  Plugin 'luochen1990/rainbow'
  " Run npm install -g livedown at first
  " to open markdown file in a browser tab
- Plugin 'shime/vim-livedown'
+ " Plugin 'shime/vim-livedown'
  Plugin 'sheerun/vim-polyglot'
  nmap <Leader>md :LivedownToggle<CR>
  set t_u7= 
  let g:airline_extensions = ['branch', 'netrw', 'ale', 'tabline']
+ let g:airline#extensions#ale#enabled = 1
  " jump to next or previous buffer
  map <C-S-Left>  :bp<CR>
  map <C-S-Right> :bn<CR>
